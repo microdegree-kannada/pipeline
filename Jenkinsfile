@@ -13,11 +13,11 @@ pipeline {
         stage('checkout') {
             steps {
                 echo "the branch is ${params.branch}"
-                git branch: 'main', url: 'https://github.com/microdegree-kannada/mvn_jar.git'
+                git branch: 'main', url: 'https://github.com/microdegree-kannada/pipeline.git'
                 }
             }
         stage('compile and build'){
-            when {
+           when {
 	            expression {
 	            	return BRANCH == 'main';
                               }
@@ -28,7 +28,8 @@ pipeline {
                 }
             }
         stage('Test'){
-            steps{
+           
+		steps{
                 sh "mvn test"
              }
         }
