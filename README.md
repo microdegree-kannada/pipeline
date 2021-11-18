@@ -1,1 +1,1 @@
-# pipeline demonstration
+# pipeline demonstration for automatic builds
