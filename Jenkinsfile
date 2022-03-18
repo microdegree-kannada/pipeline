@@ -14,6 +14,7 @@ pipeline {
             steps {
                 echo "the branch is ${params.branch}"
                 git branch: 'main', url: 'https://github.com/microdegree-kannada/pipeline.git'
+		echo "demonstrating"
                 }
             }
         stage('compile and build'){
